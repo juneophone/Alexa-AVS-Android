@@ -22,9 +22,11 @@ Need to open Android Apps Setting storage device permissions.
     - TextToSpeech
     - NanoHTTPD
     - Alexa Voice Service (AVS)
-    
-# Alexa Voice Service (AVS) Developer Console
-   * How to get the "Client ID" and "Client secret" required by Apps?
+
+# How to get the "Client ID" and "Client secret" required by Apps?
+   * You need to set up a virtual drive on the AVS website.
+
+# Alexa Voice Service (AVS) Developer Console  
    * How to setting virtual device?
    
    1. You need to apply for an AVS account. [URL](https://developer.amazon.com/en-US/alexa/devices/alexa-built-in/development-resources/sdk)
@@ -67,4 +69,4 @@ Need to open Android Apps Setting storage device permissions.
   [Alexa Voice Command](https://www.cnet.com/home/smart-home/every-alexa-command-you-can-give-your-amazon-echo-smart-speaker-or-display/)  
   [Alexa Voice Service (AVS) with cURL](https://miguelmota.com/blog/alexa-voice-service-with-curl/)  
   [HttpURLConnection](http://www.tastones.com/zh-tw/stackoverflow/android/httpurlconnection/upload_post_file_using_httpurlconnection/)
-  
+  [Alexa Voice Command Example](https://www.cnet.com/home/smart-home/every-alexa-command-you-can-give-your-amazon-echo-smart-speaker-or-display/)  
