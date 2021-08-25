@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/input_text"
+                android:layout_width="1400sp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clearInputText"
+                android:text="Clear"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/input_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="Get_AuthCode"
+                android:text="Get Authorization Code"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_token"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="Get_Token"
+                android:text="Get Token"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_refreshtoken"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="Refresh_Token"
+                android:text="Refresh Token"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_getalexa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Get_Alexa"
+            android:text="Get Alexa MP3"
+            android:textSize="50sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_sendwav"
+            android:layout_width="match_parent"
+            android:layout_height="120sp"
+            android:onClick="Call_Alexa_Assistant"
+            android:text="Call Alexa Assistant"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/btn_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Alexa Assistant Example:"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Name1"
+                android:text="Steve Jobs"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Name2"
+                android:text="Jeff Bezos"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_weather1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Weather1"
+                android:text="Taoyuan"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_weather2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Weather2"
+                android:text="Taipei"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_math1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Math1"
+                android:text="Plus"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_math2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Math2"
+                android:text="Subtraction"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+            <Button
+                android:id="@+id/btn_math3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Math3"
+                android:text="Multiplication"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+            <Button
+                android:id="@+id/btn_math4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:onClick="btn_Math4"
+                android:text="Factorial"
+                android:textAllCaps="false"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

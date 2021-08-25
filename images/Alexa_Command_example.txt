@@ -1,0 +1,19 @@
+https://www.cnet.com/home/smart-home/every-alexa-command-you-can-give-your-amazon-echo-smart-speaker-or-display/
+
+Alexa example:
+what's the date
+what time is it
+what's the Steve Jobs
+what's the Jeff Bezos
+
+News and weather:
+what's in the news
+
+what's the weather in Taoyuan
+what's the weather in New York
+
+Math:
+what's 5 plus 7
+what's 56 times 33
+what's 70 factorial
+
