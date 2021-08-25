@@ -24,7 +24,9 @@ Need to open Android Apps Setting storage device permissions.
     - Alexa Voice Service (AVS)
     
 # Alexa Voice Service (AVS) Developer Console
-   How to setting virtual device.
+   * How to get the "Client ID" and "Client secret" required by Apps?
+   * How to setting virtual device?
+   
    1. You need to apply for an AVS account. [URL](https://developer.amazon.com/en-US/alexa/devices/alexa-built-in/development-resources/sdk)
    2. Enter the AVS Developer Console. [URL](https://developer.amazon.com/alexa/console/avs/home)
    3. Products -> "MANAGE YOUR PRODUCTS". 
