@@ -5,6 +5,12 @@ Alexa Voice Service (AVS) 整合用於手寫問題後由 Alexa 回答問題的�
 
 (本項目為測試用，並沒有優化 Source code)
 
+# Technology
+    - Handwriting IME
+    - TextToSpeech
+    - NanoHTTPD
+    - Alexa Voice Service (AVS)
+
 # Run Environment
     - Android 9
 
@@ -16,12 +22,6 @@ Need to open Android Apps Setting storage device permissions.
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
-
-# Technology
-    - Handwriting IME
-    - TextToSpeech
-    - NanoHTTPD
-    - Alexa Voice Service (AVS)
 
 # How to get the "Client ID" and "Client secret" required by Apps?
    * You need to set up a virtual drive on the AVS website.
