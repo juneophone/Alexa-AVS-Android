@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     // Alexa Parameter
     private String mAccess_Token;
     private String mRefresh_Token;
+    private String mCLIENT_ID =     "amzn1.application-oa2-client.479a904b71c84e14802467e80277c0ee";
+    private String mCLIENT_SECRET = "12a847876062b5132bbb1a9c1f70a0f9a99c661f292952021ec7a4a4af90b5ab";
+    private String mREDIRECT_URL =  "http://localhost:9745/authresponse";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,14 +85,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String GetAmazonUrl() {
-        String CLIENT_ID = "amzn1.application-oa2-client.479a904b71c84e14802467e80277c0ee";
         String DEVICE_TYPE_ID = "test_device";
-        String DEVICE_SERIAL_NUMBER = "12a847876062b5132bbb1a9c1f70a0f9a99c661f292952021ec7a4a4af90b5ab";
-        String REDIRECT_URI = "http://localhost:9745/authresponse";
         String RESPONSE_TYPE = "code";
         String SCOPE = "alexa:all";
-        String SCOPE_DATA = "{\"alexa:all\": {\"productID\": \"" + DEVICE_TYPE_ID + "\", \"productInstanceAttributes\": {\"deviceSerialNumber\": \"" + DEVICE_SERIAL_NUMBER + "\"}}}";
-        String AUTH_URL = "https://www.amazon.com/ap/oa?client_id=" + CLIENT_ID + "&scope=" + SCOPE + "&scope_data=" + SCOPE_DATA + "&response_type=" + RESPONSE_TYPE + "&redirect_uri=" + REDIRECT_URI + "";
+        String SCOPE_DATA = "{\"alexa:all\": {\"productID\": \"" + DEVICE_TYPE_ID + "\", \"productInstanceAttributes\": {\"deviceSerialNumber\": \"" + mCLIENT_SECRET + "\"}}}";
+        String AUTH_URL = "https://www.amazon.com/ap/oa?client_id=" + mCLIENT_ID + "&scope=" + SCOPE + "&scope_data=" + SCOPE_DATA + "&response_type=" + RESPONSE_TYPE + "&redirect_uri=" + mREDIRECT_URL + "";
         Log.d(TAG, "AUTH_URL = " + AUTH_URL);
         showMsg(AUTH_URL);
         return AUTH_URL;
@@ -111,13 +111,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    String CLIENT_ID = "amzn1.application-oa2-client.479a904b71c84e14802467e80277c0ee";
-                    String CLIENT_SECRET = "12a847876062b5132bbb1a9c1f70a0f9a99c661f292952021ec7a4a4af90b5ab";
                     String CODE = mHttpServer.getAuthCode();
                     String GRANT_TYPE = "authorization_code";
-                    String REDIRECT_URL = "http://localhost:9745/authresponse";
                     Log.d(TAG, "CODE = " + CODE);
-
                     URL url = new URL("https://api.amazon.com/auth/o2/token");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("POST");
@@ -129,9 +125,9 @@ public class MainActivity extends AppCompatActivity {
                     // add http parameter
                     String body =   "grant_type=" + GRANT_TYPE +
                                     "&code=" + CODE +
-                                    "&client_id=" + CLIENT_ID +
-                                    "&client_secret=" + CLIENT_SECRET +
-                                    "&redirect_uri=" + REDIRECT_URL + "";
+                                    "&client_id=" + mCLIENT_ID +
+                                    "&client_secret=" + mCLIENT_SECRET +
+                                    "&redirect_uri=" + mREDIRECT_URL + "";
 //                    Log.d(TAG, body);
                     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
                     writer.write(body);
@@ -171,12 +167,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    String CLIENT_ID = "amzn1.application-oa2-client.479a904b71c84e14802467e80277c0ee";
-                    String CLIENT_SECRET = "12a847876062b5132bbb1a9c1f70a0f9a99c661f292952021ec7a4a4af90b5ab";
                     String GRANT_TYPE = "refresh_token";
-                    String REDIRECT_URL = "http://localhost:9745/authresponse";
-
-                    //URL url = new URL(Url);
                     URL url = new URL("https://api.amazon.com/auth/o2/token");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("POST");
@@ -188,9 +179,9 @@ public class MainActivity extends AppCompatActivity {
                     // add http parameter
                     String body =   "grant_type=" + GRANT_TYPE +
                             "&refresh_token=" + mRefresh_Token +
-                            "&client_id=" + CLIENT_ID +
-                            "&client_secret=" + CLIENT_SECRET +
-                            "&redirect_uri=" + REDIRECT_URL + "";
+                            "&client_id=" + mCLIENT_ID +
+                            "&client_secret=" + mCLIENT_SECRET +
+                            "&redirect_uri=" + mREDIRECT_URL + "";
 //                    Log.d(TAG, body);
                     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
                     writer.write(body);

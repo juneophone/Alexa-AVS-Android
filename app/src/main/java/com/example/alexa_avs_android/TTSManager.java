@@ -15,7 +15,7 @@ public class TTSManager {
 
 
     public void initTTS(Context context){
-        Log.i(TAG, "initTTS()");
+        //Log.i(TAG, "initTTS()");
         mTTS = new TextToSpeech(context, onInitListener);
     }
 
