@@ -66,7 +66,7 @@ Need to open Android Apps Setting storage device permissions.
     
 # Reference
   [AlexaNotificationCurl](https://github.com/gravesjohnr/AlexaNotificationCurl/blob/master/README.md)  
-  [Alexa Voice Command](https://www.cnet.com/home/smart-home/every-alexa-command-you-can-give-your-amazon-echo-smart-speaker-or-display/)  
+  [Alexa Voice Command Example](https://www.cnet.com/home/smart-home/every-alexa-command-you-can-give-your-amazon-echo-smart-speaker-or-display/)  
   [Alexa Voice Service (AVS) with cURL](https://miguelmota.com/blog/alexa-voice-service-with-curl/)  
   [HttpURLConnection](http://www.tastones.com/zh-tw/stackoverflow/android/httpurlconnection/upload_post_file_using_httpurlconnection/)
-  [Alexa Voice Command Example](https://www.cnet.com/home/smart-home/every-alexa-command-you-can-give-your-amazon-echo-smart-speaker-or-display/)  
+   
