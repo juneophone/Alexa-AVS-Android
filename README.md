@@ -1,5 +1,5 @@
 # Alexa-AVS-Android
-Alexa Voice Service (AVS) is integrated for answering questions by Alexa after handwriting questions. The input of the question is to use the handwriting recognition input method, use Android TextToSpeech to convert the text to speech, and use HttpURLConnection to communicate with Alexa to get the voice of the answer.
+Alexa Voice Service (AVS) is integrated for answering questions by Alexa after handwriting questions. The input of the question is to use the handwriting recognition input method. Use Android TextToSpeech to convert text to speech. Use HttpURLConnection to communicate with Alexa to get the voice of the answer.
 
 Alexa Voice Service (AVS) 整合用於手寫問題後由 Alexa 回答問題的答案。問題的輸入是使用手寫辨識輸入法，使用 Android TextToSpeech 把文字轉換為語音，使用 HttpURLConnection 與 Alexa 進行溝通得到答案的語音。
 
